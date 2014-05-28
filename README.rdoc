@@ -1,5 +1,7 @@
 == Saenuri Young Adults FB Group Post Integration
 
+Live Demo can be found at: http://hyo.cloudapp.net
+
 === How to Configure For Development
 
 * Web Server: Apache + Phusion Passenger
