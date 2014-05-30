@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'home#index'
+  get  'fb_group_feeds' => 'home#fb_group_feeds'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

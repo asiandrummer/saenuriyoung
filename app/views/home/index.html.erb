@@ -1,28 +1,4 @@
 <div class='row'>
     <div class='small-centered small-8 columns' id='facebookPosts'>
-    <% @groups.each do |group| %>
-        <div class='row'>
-            <div class='small-4 columns'>
-                <%= group["from"]["name"] %>
-            </div>
-            <div class='small-8 columns'>
-                <div class='row'>
-                    <div class='small-12 columns'>
-                        <%= group["message"] %>
-                    </div>
-                    <% if group["type"] == "photo" %>
-                    <div class='small-12 columns'>
-                        <img src="<%= group["picture_object"]["source"] %>" />
-                    </div>
-                    <% elsif group["type"] == "video" %>
-                    <div class='small-12 columns'>
-                        <iframe src="<%= group["source"] %>" type="application/x-shockwave-flash" />
-                    </div>
-                    <% end %>
-                </div>
-            </div>
-        </div>
-        <hr>
-    <% end %>
     </div>
 </div>

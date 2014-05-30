@@ -1,0 +1,30 @@
+<% @feeds.each do |feed| %>
+    <div class='row'>
+        <div class='small-4 columns'>
+            <%= feed["from"]["name"] %>
+        </div>
+        <div class='small-8 columns'>
+            <div class='row'>
+                <div class='small-12 columns'>
+                    <%= feed["message"] %>
+                </div>
+                <% if feed["type"] == "photo" %>
+                <div class='small-12 columns'>
+                    <img src="<%= feed["picture_object"]["source"] %>" />
+                </div>
+                <% elsif feed["type"] == "video" %>
+                <div class='small-12 columns'>
+                    <iframe src="<%= feed["source"] %>" type="application/x-shockwave-flash" />
+                </div>
+                <% elsif feed["type"] == "link" %>
+                <div class='small-12 columns'>
+                    <a href="<%= feed["link"] %>">
+                        <%= feed["name"] %>
+                    </a>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <hr>
+<% end %>
